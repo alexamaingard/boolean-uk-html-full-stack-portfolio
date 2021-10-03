@@ -1,0 +1,272 @@
+* {
+    margin:0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.2em;
+    line-height: 1.5;
+}
+
+h1 { 
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    text-transform: uppercase;
+    font-size: 2.5rem;
+    line-height: 1.5;
+    padding: 20px 0;
+
+    display: grid;
+    place-items: center;
+    text-align: left;
+}
+
+h2 {
+    text-transform: uppercase;
+
+    display: grid;
+    place-items: center;
+}
+
+h3 {
+    background-color: black;
+    color: white;
+    font-weight: lighter;
+
+    display: grid;
+    place-items: center;
+}
+
+h4 {
+    height: 15px;
+
+    display: grid;
+    place-items: end start;
+}
+
+p {
+    padding: 10px 0;
+}
+
+/************************************* PROFILE PAGE ************************************/
+
+nav a {
+    color: #71c9ce;
+    text-decoration: none;
+}
+
+.profile-header {
+    height: 30px;
+    background-color: #71c9ce;
+    padding: 10px;
+
+    display: grid;
+    place-items: center end;
+    grid-template-columns: 140px minmax(200px, 1fr);
+    grid-row: 50px;
+
+    grid-area: header;
+}
+
+#name {
+    color: white;
+}
+
+.navigation {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+
+    place-items: center end;
+}
+
+.header-button {
+    background-color: white;
+    color: #71c9ce;
+    text-transform: uppercase;
+    padding: 4px 10px;
+    border-radius: 5px;
+}
+
+.profile-main {
+    padding: 120px;
+    color: white;    
+
+    display: grid;
+    grid-area: prof-box;
+
+    text-align: justify;
+}
+
+.highlight {
+    color: black;
+    font-weight: bold;
+}
+
+.underline {
+    text-decoration: black underline;
+}
+
+#profile {
+    height: 100vh;
+    width: 100wh;
+    background-color: #71c9ce;
+    border-bottom: 5px solid black;
+
+    display: grid;
+    grid-template:
+        "header header header" 100px
+        ". prof-box ." 1fr
+        ".  .   ." 100px/
+        1fr 70ch 1fr;
+}
+
+/************************************* ABOUT ME PAGE ************************************/
+
+.about-title {
+    display: grid;
+    grid-area: a-title;
+}
+
+#intro {
+    display: grid;
+    grid-area: intro;
+}
+
+#tech-skills {
+    display: grid;
+    grid-area: skills;
+}
+
+ul {
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+}
+
+#about-me-page {
+    height: 50vh;
+    width: 100wh;
+    padding: 120px;
+    border-bottom: 5px solid black;
+
+    display: grid;
+    grid-template:
+        ". a-title ." 50px
+        ". intro ." 1fr
+        ". skills ." 1fr/
+        1fr 60ch 1fr;
+    
+    gap: 20px;
+    
+}
+
+/************************************* PORTFOLIO PAGE ************************************/
+
+.date-time {
+
+    display: grid;
+    grid-area: date;
+}
+
+.certification h2 {
+    place-items: start;
+}
+
+.certification p {
+    font-size: .9rem;
+}
+
+.certification {
+    border: 5px solid rgb(192, 13, 112);
+    border-radius: 5px;
+    box-shadow: 0 5px 13px rgba(192, 13, 112, 0.4);
+
+    padding:25px;
+    display: grid;
+    grid-template-rows: 30px 260px 25px 25px;
+    gap: 2px;
+}
+
+.title-button {
+    background-color: rgb(192, 13, 112);
+    border-radius: 5px;
+    color: white;
+    text-transform: uppercase;
+    padding: 2px;
+
+    display: grid;
+    place-items: center;
+
+}
+
+.title-button a {
+    text-decoration: none;
+    color: white;
+}
+
+.repo-link {
+    font-size: smaller;
+    color: rgb(192, 13, 112);
+    text-decoration: underline;
+    padding: 0;
+
+    display: grid;
+    place-items: center;
+}
+
+.repo-link a {
+    color: rgb(192, 13, 112);
+}
+
+#certifications {
+    display: grid;
+    grid-area: certifications;
+    grid-auto-flow: column;
+    gap: 15px;
+}
+
+#portfolio {
+    height: 65vh;
+    width: 100wh;
+    padding: 50px;
+    border-bottom: 5px solid black;
+
+    display: grid;
+    grid-template:
+        "date" 30px
+        "certifications" 1fr;
+    gap: 20px;
+}
+
+/************************************* EXPERIENCE PAGE ************************************/
+
+#experience h2 {
+    height: 30px;
+}
+
+.job-experiences {
+    display: grid;
+    grid-area: exp;
+
+    grid-template-rows: 40 px repeat(3, 1fr);
+    gap: 20px;
+}
+
+#experience {
+    height: 100vh;
+    width: 100wh;
+    padding: 120px;
+    border-bottom: 5px solid black;
+
+    display: grid;
+    grid-template: 
+        ". exp ."/ 
+        1fr 60ch 1fr;
+
+}
